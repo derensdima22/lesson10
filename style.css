@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+body * {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-weight: normal;
+}
+.exercise{
+    position: absolute;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+}
+.exercise1{
+    left: 20px;
+}
+.wk{
+    width: 350px;
+    height: 320px;
+    padding: 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+.wk1{
+    display: none;
+}
+input#checkboxWork1:checked + .wk1{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+.wk2{
+    display: none;
+}
+input#checkboxWork2:checked + .wk2{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+.exercise2{
+    right: 20px;
+}
+.work1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.border{
+    height: 100vh;
+    border-right: 1px solid #000;
+}
+.work2{
+    font-size: 30px;
+}
+button{
+    padding: 7px;
+    width: 90px;
+    height: 40px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+.startTime{
+    background-color: rgb(23, 219, 82);
+}
+.stopTime{
+    background-color: rgb(187, 26, 26);
+}
