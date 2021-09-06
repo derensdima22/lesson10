@@ -59,6 +59,7 @@ function work2() {
   stopTime.addEventListener("click", () => {
     clearInterval(clock);
   });
+
   startTime.addEventListener(
     "click",
     () => (clock = setInterval(interval, 1000))
@@ -68,3 +69,38 @@ function work2() {
 }
 work2();
 
+function work3() {
+  const work2 = document.querySelector(".work2");
+  const stopTime = document.createElement("button");
+  const myDate = document.createElement("h2");
+  let clock = setInterval(interval, 1000);
+  let stopStart = true;
+
+  stopTime.classList.add("stopTime2");
+  stopTime.innerHTML = "Stop";
+
+  function interval() {
+    myDate.innerHTML = new Date().toTimeString().replace(/ .*/, "");
+  }
+  stopTime.addEventListener("click", () => {
+    if (stopStart) {
+      clearInterval(clock);
+      stopTime.innerHTML = "Start";
+      stopTime.style.backgroundColor = "rgb(23, 219, 82)";
+      stopStart = false;
+    } else {
+      clock = setInterval(interval, 1000);
+      stopTime.innerHTML = "Stop";
+      stopTime.style.backgroundColor = "rgb(187, 26, 26)";
+      stopStart = true;
+    }
+  });
+
+  // startTime.addEventListener(
+  //   "click",
+  //   () => (clock = setInterval(interval, 1000))
+  // );
+
+  work2.append(myDate, stopTime);
+}
+work3();
